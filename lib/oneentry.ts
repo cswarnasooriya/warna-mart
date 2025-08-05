@@ -16,7 +16,7 @@ async function setupApiClient() : Promise<ReturnType<typeof defineOneEntry>> {
     throw new Error("ONEENTRY_PROJECT_URL is Missing");
   }
 
-  if(apiClient) {
+  if(!apiClient) {
     try{
         const refreshToken = await retrieveRefreshToken();
         
