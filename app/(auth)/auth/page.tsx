@@ -34,7 +34,8 @@ interface LoginFormData {
 
 
 
-const page = () => {
+const Page = () => {
+    
     const [isSignUp, setIsSignUp] = useState(true);
     const router = useRouter();
     const searchParams = useSearchParams(); 
@@ -190,7 +191,7 @@ const page = () => {
                     ) : (
                     <form onSubmit={handleSubmit} className="sm:space-y-6 space-y-4">
 
-                        {formData.map((field: any) => (
+                        {formData.map((field:any) => (
                             <div key={field.marker} >
 
                                 <Label htmlFor={field.marker} className="text-base sm:text-lg text-gray-400 mb-1 sm:mb-2 block">
@@ -262,5 +263,5 @@ const page = () => {
   )
 }
 
-export default page
+export default Page;
 
